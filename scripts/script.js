@@ -11,7 +11,19 @@ var elems = document.getElementsByTagName("pre");
 const ide = document.getElementById("main-container");
 var errBuffer = false;
 
-alert("For now statement 'reload' reloads the page \n An error statement falls apart\n New functions will be updated");
+let confirmation = confirm("For now statement 'reload' reloads the page \n An error statement falls apart\n New functions will be updated");
+if(confirmation) {
+    const el = document.documentElement; // entire page
+
+    if (el.requestFullscreen) {
+      el.requestFullscreen();
+    } else if (el.webkitRequestFullscreen) { // Safari
+      el.webkitRequestFullscreen();
+    }
+}
+
+/// fix this please !!!
+
 function valid(key) {
     let validTxt = [
         '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
@@ -235,6 +247,13 @@ let string = input.value;
 let extraInput;
 
 input.addEventListener("input", (e) => {
+    const el = document.documentElement; // entire page
+
+    if (el.requestFullscreen) {
+      el.requestFullscreen();
+    } else if (el.webkitRequestFullscreen) { // Safari
+      el.webkitRequestFullscreen();
+    }
 
     elems = document.getElementsByTagName("pre");
     if (!e.data) {
