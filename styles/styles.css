@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 1vh;
+    background-color: rgb(13, 13, 13);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--borderR);
+    background-color: rgba(255, 253, 253, 0.861);
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+    color: limegreen;
+    font-family: monospace;
+    font-size: 1rem;
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-family: "ubuntu sans mono"; */
+}
+
+textarea {
+    position: absolute;
+    top: -100%;
+}
+
+#main-container {
+    background-color: black;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 35rem;
+    z-index: 1;
+}
+
+pre {
+    min-width: 1px;
+    margin-left: 1%;
+    width: fit-content;
+    height: 1rem;
+}
+
+.active {
+    border-right-style: solid;
+    border-right-width: 5px;
+    border-right-color: red;
+    animation: blink .5s infinite;
+}
+
+@keyframes blink {
+    from {
+        border-right-color: transparent;
+    }
+
+    to {
+        border-right-color: red;
+    }
+}
+
+@keyframes errShake {
+    0% {
+        transform: translateX(0%);
+    }
+
+    33% {
+        transform: translateX(10px);
+    }
+
+    66% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.errContainer {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: fit-content;
+    height: 1rem;
+    margin-left: 3.5rem;
+}
+
+span.falling {
+    position: relative;
+    display: inline-block;
+    /* overflow: auto; */
+    /* width: 9.6px; */
+    animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: 100vh;
+    }
+}
