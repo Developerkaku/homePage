@@ -11,16 +11,17 @@ var elems = document.getElementsByTagName("pre");
 const ide = document.getElementById("main-container");
 var errBuffer = false;
 
-let confirmation = confirm("For now statement 'reload' reloads the page \n An error statement falls apart\n New functions will be updated");
-if(confirmation) {
-    const el = document.documentElement; // entire page
+// let confirmation = confirm("For now statement 'reload' reloads the page \n An error statement falls apart\n New functions will be updated");
+// if(confirmation) {
+//     const el = document.documentElement; // entire page
 
-    if (el.requestFullscreen) {
-      el.requestFullscreen();
-    } else if (el.webkitRequestFullscreen) { // Safari
-      el.webkitRequestFullscreen();
-    }
-}
+//     if (el.requestFullscreen) {
+//       el.requestFullscreen();
+//     } else if (el.webkitRequestFullscreen) { // Safari
+//       el.webkitRequestFullscreen();
+//     }
+// }
+
 
 /// fix this please !!!
 
